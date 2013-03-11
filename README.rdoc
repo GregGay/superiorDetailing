@@ -1,0 +1,1 @@
+Superior Detailing project using Ruby on Rails!
