@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
 
   validates :firstname,  presence: true, length: { maximum: 35 }
   validates :lastname,  presence: true, length: { maximum: 35 }
@@ -32,7 +33,7 @@ class User < ActiveRecord::Base
   validates :city, presence: true
   VALID_STATE_REGEX = /[a-zA-Z]/
   validates :state,  presence: true, length: { is: 2 }, format: { with: VALID_STATE_REGEX }
-  VALID_ZIP_REGEX = /\d/
+  VALID_ZIP_REGEX = /\d{5}/
   validates :zip, presence: true, length: { is: 5 }, format: { with: VALID_ZIP_REGEX }
   
   VALID_PHONE_REGEX = /\d{10}/
@@ -40,4 +41,9 @@ class User < ActiveRecord::Base
   
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  
+  private
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end
