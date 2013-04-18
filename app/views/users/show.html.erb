@@ -3,10 +3,17 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
 	    <%= @user.firstname %>
 	    <%= @user.lastname %>
       </h1>
     </section>
   </aside>
+  <div class="span8">
+    <% if @user.appointments.any? %>
+      <h3>Appointments (<%= @user.appointments.count %>)</h3>
+      <ol class="appointments">
+        <%= render @appointments %>
+      </ol>
+    <% end %>
+  </div>
 </div>

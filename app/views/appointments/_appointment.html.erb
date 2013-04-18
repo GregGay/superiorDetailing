@@ -1,0 +1,13 @@
+<li>
+  <span class="package"><%= appointment.package %></span>
+  <span class="date"><%= appointment.date %></span>
+  
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(appointment.created_at) %> ago.
+  </span> 
+  <% if current_user?(appointment.user) %>
+    <%= link_to "delete", appointment, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: appointment.date %>
+  <% end %>
+</li>

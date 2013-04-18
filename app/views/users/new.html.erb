@@ -4,7 +4,7 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :first_name %>
       <%= f.text_field :firstname %>
@@ -35,7 +35,10 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
-	  <br/>
+
+      <!--<%= f.label :Appointment %>
+      <%= f.select :state, [['Please select a date and time', nil], '04-05-2013 at 10:00am-11:00am', '04-05-2013 at 11:30am-12:30pm', '04-05-2013 at 10:00am-11:00am', '04-05-2013 at 11:30am-12:30pm'] %>-->
+	    <br/>
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
