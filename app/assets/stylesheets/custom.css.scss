@@ -84,7 +84,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
+  border-top: 2px solid black;
   color: $grayLight;
   a {
     color: $gray;
@@ -149,7 +149,8 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 55%;
+  //width: 55%;
+  height: 55%;
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
