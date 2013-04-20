@@ -4,10 +4,9 @@
       <section>
         <%= render 'shared/user_info' %>
       </section>
-      <section>
-        <%= render 'shared/appointment_form' %>
-      </section>
     </aside>
+        <%= render 'shared/appointment_form' %>
+
   </div>  
 <% else %>
   <div class="center hero-unit">
@@ -22,6 +21,4 @@
     <%= link_to "Sign up now!", signup_path, 
                                 class: "btn btn-large btn-primary" %>
   </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %>
