@@ -1,3 +1,18 @@
+<!--<script type="text/javascript">	
+function appTest() {
+var app_date1 = document.getElementById('date').value();
+var app_date2 = document.getElementById('date2').value();
+
+if (app_date1 && app_date2 != "") {
+
+alert("Please try again. You cannot book multiple appointments at the same time.");
+//document.new_appointment.appointment_date2.focus();
+document.getElementById('new_appointment').reset();
+}
+}
+, :html => { :onsubmit => 'appTest();' }
+</script>-->
+
 <%= form_for(@appointment) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 <div class="row">
@@ -211,7 +226,7 @@
 </div>
 
 </br>
-<%= f.select :package, [['Select a package', nil], '60 Dollars', '80 Dollars'] %>
+<%= f.select :package, [['Select a package', nil], '60 Dollars', '80 Dollars', '100 Dollars'] %>
 </br>
 <%= f.submit "Create Appointment", class: "btn btn-large btn-primary" %>
 <% end %>
