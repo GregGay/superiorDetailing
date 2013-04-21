@@ -15,15 +15,6 @@ class Appointment < ActiveRecord::Base
   #validates :date7, presence: { :if => :date? && :date2? && :date3? && :date4? && :date5? && :date6? && :date8? }, uniqueness: true
   #validates :date8, presence: { :if => :date? && :date2? && :date3? && :date4? && :date5? && :date6? && :date7? }, uniqueness: true
 
-  validates :date, uniqueness: true
-  validates :date2, uniqueness: true
-  validates :date3, uniqueness: true
-  validates :date4, uniqueness: true
-  validates :date5, uniqueness: true
-  validates :date6, uniqueness: true
-  validates :date7, uniqueness: true
-  validates :date8, uniqueness: true
-
 ###USER_ID###
   validates :user_id, presence: true
 
