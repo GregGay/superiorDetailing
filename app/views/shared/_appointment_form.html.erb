@@ -218,10 +218,10 @@ document.getElementById('new_appointment').reset();
 	</tr>
 	</table>
 	<br/>
+	<%= link_to image_tag("logo_2.jpg", alt: "Logo", width:"175", height:"175", align:"right"), root_path %>
+	<br/><br/>
+	<%= f.select :package, [['Select a package', nil], '60 Dollars', '80 Dollars', '100 Dollars'] %>
+	<br/><br/><br/>
+	<%= f.submit "Create Appointment", class: "btn btn-large btn-primary" %>
+	<% end %>
 </div>
-
-</br>
-<%= f.select :package, [['Select a package', nil], '60 Dollars', '80 Dollars', '100 Dollars'] %>
-</br>
-<%= f.submit "Create Appointment", class: "btn btn-large btn-primary" %>
-<% end %>
