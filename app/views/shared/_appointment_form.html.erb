@@ -12,29 +12,17 @@ document.getElementById('new_appointment').reset();
 }
 , :html => { :onsubmit => 'appTest();' }
 </script>-->
-<style type="text/css">
-th {
-	background-image: -moz-linear-gradient(top, #003, #009);
-    background-image: -ms-linear-gradient(top, #003, #009);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#003), to(#009));
-    background-image: -webkit-linear-gradient(top, #003, #009);  background-image: -o-linear-gradient(top, #003, #009);
-    background-image: linear-gradient(top, #003, #009);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000033', endColorstr='#000099', GradientType=0);
-	text-align:center;
-	color:#ffffff;
-	font-weight:bold;
-}
-</style>
 
 <%= form_for(@appointment) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 <div class="row">
+  <br/><br/><br/>
+  <hr/>
   <h1>
     Schedule Your Appointment
   </h1>
 </div>
-<hr/><br/>
+<hr/>
 <div class="field">
 	<h1>
 	   	May 2013
@@ -42,13 +30,13 @@ th {
 	<table border="3">
 <!--DAYS OF THE WEEK-->
 	<tr>
-		<th>Sunday<br/><br/></th>
-		<th>Monday<br/><br/></th>
-		<th>Tuesday<br/><br/></th>
-		<th>Wednesday<br/><br/></th>
-		<th>Thursday<br/><br/></th>
-		<th>Friday<br/><br/></th>
-		<th>Saturday<br/><br/></th>
+		<th>Sunday</th>
+		<th>Monday</th>
+		<th>Tuesday</th>
+		<th>Wednesday</th>
+		<th>Thursday</th>
+		<th>Friday</th>
+		<th>Saturday</th>
 	</tr>
 <!--WEEK 1-->
 	<tr>
