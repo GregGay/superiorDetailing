@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user,     only: :destroy
 
+#Shows the user inforamtion and appointments
   def show
     @user = User.find(params[:id])
     @appointments = @user.appointments
@@ -12,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+#Creates an account
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -27,6 +29,7 @@ class UsersController < ApplicationController
     #@user = User.find(params[:id])
   end
 
+#Updates user information
   def update
     #@user = User.find(params[:id])
     if @user.update_attributes(params[:user])
@@ -38,10 +41,12 @@ class UsersController < ApplicationController
     end
   end
 
+#Lists all the users
   def index
     @users = User.all
   end
 
+#Destroys an account, only administrators can destroy accounts
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User account has been destroyed!"
@@ -49,6 +54,7 @@ class UsersController < ApplicationController
   end
 
   private
+    #Private method to check if the user is signed in
     def signed_in_user
       unless signed_in?
         store_location
@@ -56,11 +62,13 @@ class UsersController < ApplicationController
       end
     end
 
+    #Private method to check if the user is the correct user
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
     end
 
+    #Administrator can only destroy user accounts
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end

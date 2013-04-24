@@ -4,8 +4,15 @@
     <section>
       <h1>
   	    <%= @user.firstname %>
-  	    <%= @user.lastname %>
+        <%= @user.lastname %><br/><br/>
+        Email: <%= @user.email %><br/>
+        Street: <%= @user.streetaddress %><br/>
+        City: <%= @user.city %> <br/>
+        State: <%= @user.state %><br/>
+        Zip: <%= @user.zip %><br/>
+        Phone Number: <%= @user.phone %>
       </h1>
+      <br/>
       <%= link_to "Edit Profile", edit_user_path(current_user) %>
     </section>
   </aside>
