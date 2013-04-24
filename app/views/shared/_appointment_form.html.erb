@@ -50,14 +50,14 @@
 
 		<td>
 		<h2>4</h2>
-		<%= f.select :date, [['Select a date and time', nil], '05-04-2013 at 10:00am-11:00am', '05-04-2013 at 11:30am-12:30pm', '05-04-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date, [['Select a date and time', nil], '05-04-2013 at 10:00am-11:00am', '05-04-2013 at 11:30am-12:30pm', '05-04-2013 at 1:00pm-2:00pm'] %>
 		</td>
 	</tr>
 <!--WEEK 2-->
 	<tr>
 		<td>
 		<h2>5</h2>
-		<%= f.select :date2, [['Select a date and time', nil], '05-05-2013 at 10:00am-11:00am', '05-05-2013 at 11:30am-12:30pm', '05-05-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date2, [['Select a date and time', nil], '05-05-2013 at 10:00am-11:00am', '05-05-2013 at 11:30am-12:30pm', '05-05-2013 at 1:00pm-2:00pm'] %>
 		</td>
 
 		<td>
@@ -87,14 +87,14 @@
 
 		<td>
 		<h2>11</h2>
-		<%= f.select :date3, [['Select a date and time', nil], '05-11-2013 at 10:00am-11:00am', '05-11-2013 at 11:30am-12:30pm', '05-11-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date3, [['Select a date and time', nil], '05-11-2013 at 10:00am-11:00am', '05-11-2013 at 11:30am-12:30pm', '05-11-2013 at 1:00pm-2:00pm'] %>
 		</td>
 	</tr>
 <!--WEEK 3-->
 	<tr>
 		<td>
 		<h2>12</h2>
-		<%= f.select :date4, [['Select a date and time', nil], '05-12-2013 at 10:00am-11:00am', '05-12-2013 at 11:30am-12:30pm', '05-12-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date4, [['Select a date and time', nil], '05-12-2013 at 10:00am-11:00am', '05-12-2013 at 11:30am-12:30pm', '05-12-2013 at 1:00pm-2:00pm'] %>
 		</td>
 
 		<td>
@@ -124,14 +124,14 @@
 
 		<td>
 		<h2>18</h2>
-		<%= f.select :date5, [['Select a date and time', nil], '05-18-2013 at 10:00am-11:00am', '05-18-2013 at 11:30am-12:30pm', '05-18-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date5, [['Select a date and time', nil], '05-18-2013 at 10:00am-11:00am', '05-18-2013 at 11:30am-12:30pm', '05-18-2013 at 1:00pm-2:00pm'] %>
 		</td>
 	</tr>
 <!--WEEK 4-->
 	<tr>
 		<td>
 		<h2>19</h2>
-		<%= f.select :date6, [['Select a date and time', nil], '05-19-2013 at 10:00am-11:00am', '05-19-2013 at 11:30am-12:30pm', '05-19-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date6, [['Select a date and time', nil], '05-19-2013 at 10:00am-11:00am', '05-19-2013 at 11:30am-12:30pm', '05-19-2013 at 1:00pm-2:00pm'] %>
 		</td>
 
 		<td>
@@ -161,14 +161,14 @@
 
 		<td>
 		<h2>25</h2>
-		<%= f.select :date7, [['Select a date and time', nil], '05-25-2013 at 10:00am-11:00am', '05-25-2013 at 11:30am-12:30pm', '05-25-2013 at 1:00am-2:00am'] %>
+		<%= f.select :date7, [['Select a date and time', nil], '05-25-2013 at 10:00am-11:00am', '05-25-2013 at 11:30am-12:30pm', '05-25-2013 at 1:00pm-2:00pm'] %>
 		</td>
 	</tr>
 <!--WEEK 5-->
 	<tr>
 		<td>
 		<h2>26</h2>
-		<%= f.select :date8, [['Select a date and time', nil], '05-26-2013 at 10:00am-11:00am', '05-26-2013 at 11:30am-12:30pm','05-26-2013 at 1:00am-2:00am', '05-26-2013 at 5:00am-6:00am'] %>
+		<%= f.select :date8, [['Select a date and time', nil], '05-26-2013 at 10:00am-11:00am', '05-26-2013 at 11:30am-12:30pm','05-26-2013 at 1:00pm-2:00pm'] %>
 		</td>
 
 		<td>
@@ -205,7 +205,7 @@
 	<br/>
 	<%= link_to image_tag("logo_2.jpg", alt: "Logo", width:"175", height:"175", align:"right"), root_path %>
 	<br/>
-	<%= f.select :package, [['Select a package', nil], '60 Dollars', '80 Dollars', '100 Dollars'] %>
+	<%= f.select :package, [['Select a package', nil], '60 Dollars', '80 Dollars', '100 Dollars', '120 Dollars'] %>
 	<br/><br/><br/><br/>
 	<%= f.submit "Create Appointment", class: "btn btn-large btn-primary" %>
 	<% end %>
