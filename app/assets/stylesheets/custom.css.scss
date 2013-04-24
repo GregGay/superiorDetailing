@@ -60,6 +60,12 @@ p {
   line-height: 1.7em;
 }
 
+pre {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  background-color:black;
+  color:gold;
+}
 
 /* header */
 
@@ -74,7 +80,7 @@ p {
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: GoldenRod;
+    color: white;
     text-decoration: none;
   }
 }
