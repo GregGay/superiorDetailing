@@ -5,6 +5,10 @@ class StaticPagesController < ApplicationController
 
   def help
     @appointment = current_user.appointments.build if signed_in?
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
+    end
   end
 
   def about

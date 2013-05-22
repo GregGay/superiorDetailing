@@ -238,12 +238,10 @@ footer {
     @include box_sizing;
   }
 
-/* sidebar, Porfile Page */
+/* sidebar, Porfile Page, Edit Profile */
 
 .AppsBar {
   padding: 15px;
-  height: 6em;
-  width: 8em;
   color:darkgoldenrod;
   -moz-border-radius: 3em 1em 3em 1em;
   border-radius: 3em 1em 3em 1em;
@@ -303,6 +301,15 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+/* Index Page */
+
+.IndexUI {
+  padding: 15px;
+  color:white;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 /* forms */
