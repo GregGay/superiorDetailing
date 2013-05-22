@@ -1,23 +1,41 @@
-<% if signed_in? %>
-  <div class="row">
-    <aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-    </aside>
-        <%= render 'shared/appointment_form' %>
-
-  </div>  
-<% else %>
-  <div class="center hero-unit">
-    <h1>Welcome to Superior Detailing</h1>
-
-    <h2>
-      This is the home page for the
-      Superior Detailing Services web application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, 
-                                class: "btn btn-large btn-primary" %>
+<div class="container" style="background-color:black">
+  <div class="top">
+    <div class="span6">
+      <br/>
+      <h3 class="h3Home2">Welcome to </h3>
+      <h3 class="h3Home">Superior Detailing</h3>
+      <br/>
+      <h3 class="h3Home2">
+        We welcome you to experience our standards of excellence.
+        <br/><br/>
+      </h3>
+      <h3 class="h3Button">
+        <%= link_to "SIGN UP NOW!", signup_path, class: "btn btn-large btn-primary" %>
+      </h3>
+    </div>
+    <div class="span5">
+      <%= image_tag("logo_6.jpg", alt: "Logo", width:"500", height:"300") %>
+      <br/><br/><br/>
+    </div>
   </div>
-<% end %>
+</div>
+<p></p>
+<div class="container" style="background-color:black">  
+
+  <div class="bottom">
+    <div class="span5">
+      <hr class="homeHR" />
+      <h2 class="h3Home2">A Sample Of Our Work</h2>
+      <hr class="homeHR" />
+    </div>
+    <div class="span6">
+      <br/>
+      <%= image_tag("BMWFront.jpg", alt: "Logo", width:"150", height:"150") %>
+      <%= image_tag("AccordInside.jpg", alt: "Logo", width:"150", height:"150") %>
+      <%= image_tag("MercuryMariner.jpg", alt: "Logo", width:"150", height:"150") %>
+      <br/>
+      <h4 class="alignRight"><a href="https://www.facebook.com/superiordetailingpage">View More of our Work!</a></h4>
+    <br/>
+    </div>
+  </div>
+</div>

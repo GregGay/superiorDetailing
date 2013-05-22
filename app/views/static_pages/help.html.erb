@@ -1,5 +1,14 @@
-<% provide(:title, 'Help') %>
-<h1>Help</h1>
-<p>
-  Superior Detailing was created by Ravi Bissoonnauth. It's a automotive detailing business located in Asheville, NC.
-</p>
+<% if signed_in? %>
+	<div class="row">
+		<aside class="span4">
+			<div class="AppsBar" style="background-color:black">
+				<section>
+					<%= render 'shared/user_info' %>
+				</section>
+			</div>
+		</aside>
+		<%= render 'shared/appointment_form' %>
+	</div>  
+<% else %>
+	<%= link_to "Please Sign In", signin_path %>
+<% end %>
